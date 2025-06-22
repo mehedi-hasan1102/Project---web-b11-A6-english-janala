@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+
+    <!-- Tailwind CSS & DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+
+    <!-- Font: Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar -->
+
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-3 bg-gradient-to-r from-gray-50 to-gray-200 shadow-md border-b border-black z-50">
+        <div class="flex items-center gap-2">
+            <span class="font-semibold text-lg text-gray-800">English</span>
+            <img src="./assets/logo.png" alt="Windows Logo" class="w-6 h-6">
+            <span class="font-[Solaiman Lipi] text-lg text-gray-800">জানালা</span>
+        </div>
+
+        <div class="flex gap-2">
+
+            <a href="#faq"
+                class="btn btn-outline border-2 border-indigo-500 text-indigo-600 hover:bg-blue-900 hover:text-white rounded-md px-4 py-1">
+                <i class="fas fa-question-circle mr-2"></i> FAQ
+            </a>
+
+
+            <a href="#vocabulary-section"
+                class="btn btn-outline border-2 border-indigo-500 text-indigo-600 hover:bg-blue-900 hover:text-white rounded-md px-4 py-1">
+                <i class="fa-solid fa-book-open"></i> Learn
+            </a>
+
+            <a id="logout-btn"
+                class="btn btn-outline border-2 border-indigo-500 text-indigo-600 hover:bg-blue-900 hover:text-white rounded-md px-4 py-1">
+                <i class="fas fa-sign-out-alt mr-2"></i> Logout
+            </a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner" class="text-left p-6 bg-white">
+        <div class="flex flex-col md:flex-row items-center justify-between max-w-8xl mx-auto  md:px-16 py-16">
+            <div class="md:w-1/2 space-y-5 text-black text-left">
+                <h1 class="text-3xl md:text-5xl font-bold">
+                    <span class="text-blue-500">English</span> is Easy!!
+                </h1>
+                <p class="text-lg text-black">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                    আপনার দক্ষতা বাড়াতে চান, আমাদের <span class="font-semibold">Interactive Lessons</span> আপনাকে নিয়ে
+                    যাবে অন্য একটি <span class="font-semibold">Level</span> এ।
+                </p>
+
+                <div class="space-y-4 mt-6">
+
+                    <input id="username" type="text" placeholder="Enter Your Name"
+                        class="w-3/6 p-3 bg-white text-gray-700 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+
+                    <input id="password" type="password" placeholder="Default Password [123456]"
+                        class="w-3/6 p-3 bg-white text-gray-700 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+
+                </div>
+
+                <button id="login-btn"
+                    class="w-auto px-6 py-2 bg-blue-600 text-white border border-blue-600 rounded-md shadow-sm hover:bg-blue-700 hover:border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Get Started
+                </button>
+
+
+
+            </div>
+
+            <!-- Right Section - Image -->
+            <div class="mt-10 md:mt-0">
+                <div class="w-64 h-64 md:w-80 md:h-80">
+                    <img src="./assets/hero-student.png" alt="Smiling person"
+                        class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Vocabulary -->
+
+    <section id="vocabulary-section" id="learn" class=" text-center p-6 bg-white shadow-md rounded-md">
+
+        <div id="vocabulary-section" class="text-center p-6">
+            <h2 class="text-3xl font-bold text-black mt-10 mb-10">
+                <span class="text-blue-600">Let's</span> Learn Vocabularies
+            </h2>
+
+            <div id="lesson-buttons" class="flex flex-wrap justify-center gap-3 "></div>
+            <div id="word-container" class="mt-8 bg-gray-100 p-6 rounded-lg max-w-6xl mx-auto 
+    flex flex-wrap justify-center gap-6 items-center text-center ">
+                <div>
+                    <h2 class="text-gray-700 text-sm"> আপনি এখনো কোন Lesson Select করেন নি !</h2>
+                    <h2 class=" text-gray-700 text-lg">একটি Lesson Select করুন । </h2>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+<!-- Modal -->
+ <div id="modal">
+
+ </div>
+
+
+
+
+
+
+
+    <!-- FAQ  -->
+
+
+    <section id="faq" class="bg-white ">
+        <div class="max-w-7xl mx-auto py-12">
+            <h2 class="text-3xl font-bold text-center  mt-10 text-black">
+                <span class="text-blue-500">Frequently</span> Asked Questions
+            </h2>
+
+            <div class="mt-6 space-y-4">
+                <div class="collapse collapse-plus bg-gray-100">
+                    <input type="checkbox" class="peer">
+                    <div class="collapse-title text-lg font-medium">
+                        1. What is the difference between var, let, and const?
+                    </div>
+                    <div class="collapse-content text-gray-600">
+                        <p><code>var</code> is function-scoped, while <code>let</code> and <code>const</code> are
+                            block-scoped. <code>const</code> cannot be reassigned.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-gray-100">
+                    <input type="checkbox" class="peer">
+                    <div class="collapse-title text-lg font-medium">
+                        2. What is the difference between map(), forEach(), and filter()?
+                    </div>
+                    <div class="collapse-content text-gray-600">
+                        <p><code>map()</code> returns a new array, <code>forEach()</code> iterates without returning,
+                            and <code>filter()</code> returns elements that match a condition.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-gray-100">
+                    <input type="checkbox" class="peer">
+                    <div class="collapse-title text-lg font-medium">
+                        3. What is an Arrow Function and how is it different from a Regular Function?
+                    </div>
+                    <div class="collapse-content text-gray-600">
+                        <p>Arrow functions have a shorter syntax and do not bind their own <code>this</code>, making
+                            them useful in callbacks.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-gray-100">
+                    <input type="checkbox" class="peer">
+                    <div class="collapse-title text-lg font-medium">
+                        4. How do JavaScript Promises work?
+                    </div>
+                    <div class="collapse-content text-gray-600">
+                        <p>Promises handle asynchronous tasks with <code>pending</code>, <code>resolved</code>, and
+                            <code>rejected</code> states using <code>.then()</code> and <code>.catch()</code>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-gray-100">
+                    <input type="checkbox" class="peer">
+                    <div class="collapse-title text-lg font-medium">
+                        5. How do Closures work in JavaScript?
+                    </div>
+                    <div class="collapse-content text-gray-600">
+                        <p>A closure is a function that remembers variables from its outer scope even after the outer
+                            function has finished execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-black px-28 bg-white py-8 min-h-64 flex justify-between items-center ">
+        <div class="max-w-4xl flex flex-col items-start">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg text-black">English</span>
+                <img src="./assets/logo.png" alt="Windows Icon" class="h-5 w-5">
+                <span class="text-lg text-black">বাংলা</span>
+            </div>
+            <h2 class="text-2xl text-black font-semibold mt-2">ইংরেজি শেখুন সহজে</h2>
+            <p class="text-gray-600 mt-1 text-sm">Providing ED-Tech Applications since 2025</p>
+        </div>
+
+        <div class="flex space-x-6 text-gray-700">
+            <a target="_blank" href="https://www.facebook.com" class="hover:text-blue-600"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a target="_blank" href="https://www.youtube.com" class="hover:text-red-600"><i class="fab fa-youtube text-xl"></i></a>
+            <a target="_blank" href="https://www.instagram.com" class="hover:text-pink-600"><i class="fab fa-instagram text-xl"></i></a>
+            <a target="_blank" href="https://www.github.com" class="hover:text-gray-900"><i class="fab fa-github text-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
